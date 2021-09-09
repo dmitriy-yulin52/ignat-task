@@ -1,3 +1,37 @@
-.message {
+.messageBlock{
+    display: flex;
+}
+.messageWrapper {
+    background: rgb(173, 208, 247);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative; /* !!! */
+    padding: 5px;
+    margin-left: 9px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 1px 1px 3px 0px black;
+}
+.messageWrapper:after {
+    content: '';
+    border: 10px solid transparent;
+    border-right: 10px solid rgb(173, 208, 247);
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
 
+}
+
+.messageWrapper_block{
+    display: flex;
+    justify-content: space-around;
+}
+.messageWrapper_name{
+    padding-right: 120px;
+}
+img{
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
 }
