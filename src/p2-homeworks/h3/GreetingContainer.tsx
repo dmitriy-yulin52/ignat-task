@@ -1,28 +1,46 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UserType[]
+    addUserCallback: (name: string) => void
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
 
-// более современный и удобный для про :)
-// уровень локальной логики
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
+
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        let trim = e.currentTarget.value.trim()
+        if (trim) {
+            setName(trim)
+            setError('')
+        }else {
+            setName('')
+            setError('Name is required')
+        }
     }
     const addUser = () => {
-        alert(`Hello  !`) // need to fix
+        if(name === ''){
+            setError('Name is required')
+
+        }else{
+            alert(`Hello ${name} !`)
+            addUserCallback(name)
+            setName('')
+        }
     }
 
-    const totalUsers = 0 // need to fix
+    const onKeyPressHandler = (e:KeyboardEvent<HTMLInputElement>)=>{
+        if(e.key === 'Enter'){
+            addUser()
+            setName('')
+        }
+    }
+    const totalUsers = users.length // need to fix
 
     return (
         <Greeting
@@ -31,6 +49,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            onKeyPressHandler={onKeyPressHandler}
         />
     )
 }
