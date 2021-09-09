@@ -19,8 +19,8 @@ function Affairs(props: AffairsPropsType) {
         filter,
     }=props
     const mappedAffairs = data.map((a) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+        <Affair
+            key={a._id}
             id={a._id}
             name={a.name}
             deleteAffairCallback={deleteAffairCallback}
