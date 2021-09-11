@@ -1,9 +1,54 @@
-.someClass {
+.wrapper {
+    margin-left: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
-}
-input{
-    outline: none;
-}
 .error {
-    border: 1px solid red;
+    border-radius: 4px;
+    border: 1px solid crimson;
+}
+
+.errorBlock {
+    background-color: red;
+    padding: 2px 5px;
+    color: #fff;
+    font-family: monospace;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 65px;
+}
+
+.button {
+    background-color: #004987;
+    padding: 3px 4px;
+    opacity: 0.8;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+}
+
+.button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button:hover:disabled {
+    opacity: 0.6;
+}
+
+.counter {
+    background-color: #00599e;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
 }

@@ -1,16 +1,40 @@
 
-.button{
-    margin: 10px;
-    cursor: pointer;
-    overflow: hidden;
+.default,
+.red{
+    background-color: #0084de;
+    border-radius: 4px;
+    color: #ccc;
+    padding: 4px 5px;
+    margin: 5px;
+    border: 1px solid #191919;
 }
-.default {
-    background-color: dodgerblue;
-    color: gold;
+
+.default:hover,
+.red:hover {
+    background-color: #006bb7;
+    color: #fff;
     cursor: pointer;
 }
 
+.default:active,
+.red:active {
+    background-color: #191919;
+}
+
+.default:disabled,
+.red:disabled {
+    background-color: #4f4f4f;
+}
+
+.default:disabled:hover,
+.red:disabled:hover {
+    color: #ccc;
+}
+
 .red {
-    background: red;
-    cursor: pointer;
+    background-color: #c40000;
+}
+
+.red:hover {
+    background-color: #980000;
 }

@@ -15,10 +15,9 @@ const Greeting: React.FC<GreetingPropsType> = (
 ) => {
     const inputClass = s.error
 
-
-
     return (
-        <div>
+        <div className={s.wrapper}>
+            <span className={s.counter}>{totalUsers}</span>
             <input
                 value={name}
                 onChange={setNameCallback}
@@ -27,8 +26,9 @@ const Greeting: React.FC<GreetingPropsType> = (
             />
             <span>{error}</span>
             <button onClick={addUser}
+                    className={s.button}
+                    disabled={!!error}
             >add</button>
-            <span>{totalUsers}</span>
         </div>
     )
 }

@@ -4,10 +4,10 @@ import {AffairType, FilterType} from './HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
-    data:AffairType[]
-    setFilter: (filter:FilterType)=> void
-    deleteAffairCallback: (id:number)=>void
-    filter:FilterType
+    data: AffairType[]
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -16,13 +16,11 @@ function Affairs(props: AffairsPropsType) {
         data,
         setFilter,
         deleteAffairCallback,
-        filter,
-    }=props
+    } = props
     const mappedAffairs = data.map((a) => (
         <Affair
             key={a._id}
-            id={a._id}
-            name={a.name}
+            affair={a}
             deleteAffairCallback={deleteAffairCallback}
         />
     ))
@@ -40,18 +38,21 @@ function Affairs(props: AffairsPropsType) {
         setFilter('low')
     }
 
-    const styleAll = filter === 'all' ? s.someClass : ''
-    const styleHigh = filter === 'high' ? s.someClass : ''
-    const styleMiddle = filter === 'middle' ? s.someClass : ''
-    const styleLow = filter === 'low' ? s.someClass : ''
+
+
+    const setClassName = (filter: FilterType) => {
+        return `${s.button} ${props.filter === filter ? s.active : ''}`
+    }
 
     return (
-        <div>
+        <div className={s.wrapper}>
             {mappedAffairs}
-            <button onClick={setAll} className={styleAll}>All</button>
-            <button onClick={setHigh} className={styleHigh}>High</button>
-            <button onClick={setMiddle} className={styleMiddle}>Middle</button>
-            <button onClick={setLow} className={styleLow}>Low</button>
+            <div className={s.buttonsWrapper}>
+                <button onClick={setAll} className={setClassName('all')}>All</button>
+                <button onClick={setHigh} className={setClassName('high')}>High</button>
+                <button onClick={setMiddle} className={setClassName('middle')}>Middle</button>
+                <button onClick={setLow} className={setClassName('low')}>Low</button>
+            </div>
         </div>
     )
 }

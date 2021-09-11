@@ -1,7 +1,27 @@
-.checkbox {
-
+.wrapCheckbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-
-.spanClassName {
-
+.checkbox{
+    appearance:  none;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #191919;
+    cursor: pointer;
+}
+.checkbox::before{
+    content: '';
+}
+.checkbox:checked::before{
+    content: '\2714';
+    color: #fff;
+}
+.checkbox:checked{
+    background-color: #00599e;
 }

@@ -1,18 +1,28 @@
-.input{
-    outline: none;
-    background-color: red;
+.wrapper {
+    position: relative;
 }
-.superInput {
-    background-color: red;
-    color: red;
+
+.superInput,
+.errorInput {
+    border: 2px solid #797979;
+    border-radius: 4px;
+    background: #fff;
+    margin: 5px;
 }
 
 .errorInput {
-    border: 3px solid red;
-    background: red;
+    border: 2px solid #d20101;
 }
 
 .error {
-    color: red;
+    position: absolute;
+    color: #fff;
+    background-color: #cd0000;
+    border: 1px solid #bd0000;
+    border-radius: 4px;
+    padding: 0 5px;
+    margin: 4px;
+    z-index: 1000;
+    top: -23px;
+    right: 30px;
 }
-
