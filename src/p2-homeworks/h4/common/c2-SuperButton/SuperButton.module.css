@@ -1,7 +1,16 @@
-.default {
 
+.button{
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.default {
+    background-color: dodgerblue;
+    color: gold;
+    cursor: pointer;
 }
 
 .red {
     background: red;
+    cursor: pointer;
 }
