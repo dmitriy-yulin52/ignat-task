@@ -21,13 +21,16 @@
     top: 0;
     left: 65px;
 }
+input{
+    outline: none;
+}
 
 .button {
-    background-color: #004987;
+    background-color: cornflowerblue;
     padding: 3px 4px;
     opacity: 0.8;
     color: #fff;
-    border-radius: 2px;
+    border-radius: 10px;
     border: none;
 }
 
@@ -46,9 +49,22 @@
 }
 
 .counter {
-    background-color: #00599e;
+    background-color: cornflowerblue;
     padding: 0 4px;
-    border-radius: 2px;
+    border-radius: 10px;
     font-size: 14px;
     color: #fff;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+}
+.blockError{
+    margin-top: 5px;
+    margin-left: 80px;
+
+}
+.spanError{
+    color: red;
+    margin: 4px;
 }

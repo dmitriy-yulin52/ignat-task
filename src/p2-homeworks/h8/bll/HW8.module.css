@@ -1,0 +1,10 @@
+.users{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.usersWrapper {
+    width: 200px;
+    height: 150px;
+}

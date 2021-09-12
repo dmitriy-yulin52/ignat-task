@@ -12,7 +12,7 @@
     gap: 15px;
 }
 .button{
-    background-color:  #c7016e;
+    background-color:  dodgerblue;
     opacity: 0.7;
     padding: 5px 10px;
     color: white;
@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 .button:hover{
-    background-color: #a00059;
+    background-color: deepskyblue;
     opacity: 1;
 }
 .deleteButton{
@@ -36,8 +36,8 @@
     cursor: pointer;
 }
 .deleteButton:hover{
-    background-color: #ff0000;
+    background-color: deepskyblue;
 }
 .active{
-    background-color: #66003a;
+    background-color: deepskyblue;
 }

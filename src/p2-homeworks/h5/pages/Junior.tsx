@@ -13,6 +13,7 @@ function Junior() {
         <div>
             <HW7/>
             <HW8/>
+            <HW9/>
         </div>
     )
 }

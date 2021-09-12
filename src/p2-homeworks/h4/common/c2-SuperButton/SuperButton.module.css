@@ -1,17 +1,16 @@
 
 .default,
 .red{
-    background-color: #0084de;
-    border-radius: 4px;
+    background-color: deepskyblue;
+    border-radius: 10px;
     color: #ccc;
     padding: 4px 5px;
     margin: 5px;
-    border: 1px solid #191919;
 }
 
 .default:hover,
 .red:hover {
-    background-color: #006bb7;
+    background-color: dodgerblue;
     color: #fff;
     cursor: pointer;
 }
