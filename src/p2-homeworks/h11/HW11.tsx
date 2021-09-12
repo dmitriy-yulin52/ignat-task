@@ -6,28 +6,34 @@ function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
 
+
+    const onChangeHandler = (value:[number,number])=> {
+        setValue1(value[0])
+        setValue2(value[1])
+    }
+
     return (
-        <div>
+        <div style={{margin:'20px'}}>
             <hr/>
             homeworks 11
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={setValue1}
+                    value={value1}
                 />
+                <span style={{paddingBottom:'25px'}}>{value1}</span>
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div style={{float:'left'}}>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    onChangeRange={onChangeHandler}
+                    value={[value1,value2]}
                 />
                 <span>{value2}</span>
             </div>
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}
             {/*<AlternativeSuperDoubleRange/>*/}

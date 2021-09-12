@@ -1,3 +1,41 @@
 .range {
+    overflow: hidden;
+    width: 150px;
+    -webkit-appearance: none;
+    background-color: #ccc;
+    border-radius: 4px;
+    border: 1px solid #767676;
+}
 
+.range::-webkit-slider-runnable-track {
+    height: 15px;
+    -webkit-appearance: none;
+    color: #008aff;
+    margin-top: -1px;
+}
+
+.range::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    height: 15px;
+    cursor: pointer;
+    background: #005087;
+    box-shadow: -82px 0 0 80px #008aff;
+    border-radius: 4px;
+}
+
+.range::-moz-range-progress {
+    background-color: #008aff;
+}
+
+.range::-moz-range-track {
+    background-color: #ccc;
+}
+
+.range::-ms-fill-lower {
+    background-color: #008aff;
+}
+
+.range::-ms-fill-upper {
+    background-color: #ccc;
 }
