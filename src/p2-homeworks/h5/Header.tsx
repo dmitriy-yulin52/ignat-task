@@ -11,7 +11,7 @@ function Header() {
     const options = [
         { key: 1, text: <NavLink to={PATH.PRE_JUNIOR}>Pre-Junior</NavLink>, value: 1 },
         { key: 2, text: <NavLink to={PATH.JUNIOR}>Junior</NavLink>, value: 2 },
-        { key: 3, text: <NavLink to={PATH.JUNIOR_MID}>Junior+</NavLink>, value: 3 },
+        { key: 3, text: <NavLink to={PATH.JUNIOR_PLUS}>Junior+</NavLink>, value: 3 },
     ]
 
 

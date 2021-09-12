@@ -25,23 +25,29 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = date.toTimeString().slice(0,8)// fix with date
-    const stringDate = dateFormat(date,'dd.mm.yy') // fix with date
+    const stringTime = date.toTimeString().slice(0, 8)// fix with date
+    const stringDate = dateFormat(date, 'dd.mm.yy') // fix with date
 
     return (
         <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
-
-            {show && (
-                <div>
-                    {stringDate}
+            <div style={{marginLeft: '15px'}}>
+                <div style={{cursor:'pointer',width:'80px'}}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                >
+                    <span>
+                        {stringTime}
+                    </span>
                 </div>
-            )}
+
+                {show && (
+                    <div>
+                        <span>
+                            {stringDate}
+                        </span>
+                    </div>
+                )}
+            </div>
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>

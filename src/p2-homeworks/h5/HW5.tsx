@@ -5,7 +5,7 @@ import {HashRouter} from "react-router-dom";
 
 function HW5() {
     return (
-        <div>
+        <div style={{marginLeft: '10px'}}>
             <HashRouter>
                 <Header/>
                 <Routes/>

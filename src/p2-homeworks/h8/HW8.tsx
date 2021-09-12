@@ -39,12 +39,12 @@ function HW8() {
         <div>
             <hr/>
             homeworks 8
+            <div style={{marginLeft: '10px'}}>
+                <div className={s.usersWrapper}>
+                    {finalPeople}
 
-            <div className={s.usersWrapper}>
-                {finalPeople}
-
+                </div>
             </div>
-
             <div>
                 <SuperButton onClick={sortUpHandler}>sort up</SuperButton>
                 <SuperButton onClick={sortDownHandler}>down up</SuperButton>
